@@ -142,7 +142,11 @@ class _NavigationDestinationView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        ExcludeSemantics(
+        //ExcludeSemantics(
+        Semantics(
+          container: true,
+          label: item.label,
+          namesRoute: true,
           child: Center(
             child: Padding(
               padding: const EdgeInsets.all(16),
@@ -156,6 +160,7 @@ class _NavigationDestinationView extends StatelessWidget {
             ),
           ),
         ),
+        //),
         Center(
           child: IconTheme(
             data: const IconThemeData(

@@ -30,10 +30,16 @@ class TooltipDemo extends StatelessWidget {
               ),
               const SizedBox(height: 16),
               Tooltip(
+                // excludeFromSemantics: true,
                 message: localizations.starterAppTooltipSearch,
+                onTriggered: () {
+                  print("Tooltip Triggered");
+                },
                 child: IconButton(
                   color: Theme.of(context).colorScheme.primary,
-                  onPressed: () {},
+                  onPressed: () {
+                    print("Tooltip button pressed");
+                  },
                   icon: const Icon(Icons.search),
                 ),
               ),

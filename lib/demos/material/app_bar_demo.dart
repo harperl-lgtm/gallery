@@ -61,9 +61,21 @@ class AppBarDemo extends StatelessWidget {
           )
         ],
       ),
-      body: Center(
-        child: Text(
-          localization.cupertinoTabBarHomeTab,
+      body: Semantics(
+        container: true,
+        // namesRoute: true,
+        header: true,
+        // onTap: () {
+        //   print("I'm Home!");
+        // },
+        child: Center(
+          child: Text(
+            localization.cupertinoTabBarHomeTab,
+          ),
+          // child: ElevatedButton(
+          //   onPressed: () {},
+          //   child: Text('Button'),
+          // ),
         ),
       ),
     );

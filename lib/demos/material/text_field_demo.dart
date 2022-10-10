@@ -278,6 +278,7 @@ class TextFormFieldDemoState extends State<TextFormFieldDemo>
                   icon: const Icon(Icons.email),
                   hintText: localizations.demoTextFieldYourEmailAddress,
                   labelText: localizations.demoTextFieldEmail,
+                  prefixText: '@',
                 ),
                 keyboardType: TextInputType.emailAddress,
                 onSaved: (value) {

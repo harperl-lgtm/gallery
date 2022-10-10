@@ -48,6 +48,7 @@ class GalleryApp extends StatelessWidget {
         builder: (context) {
           final options = GalleryOptions.of(context);
           return MaterialApp(
+            // showSemanticsDebugger: true,
             restorationScopeId: 'rootGallery',
             title: 'Flutter Gallery',
             debugShowCheckedModeBanner: false,
