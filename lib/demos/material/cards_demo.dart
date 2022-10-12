@@ -292,9 +292,13 @@ class TravelDestinationContent extends StatelessWidget {
                 child: FittedBox(
                   fit: BoxFit.scaleDown,
                   alignment: Alignment.centerLeft,
-                  child: Text(
-                    destination.title,
-                    style: titleStyle,
+                  child: Semantics(
+                    container: true,
+                    header: true,
+                    child: Text(
+                      destination.title,
+                      style: titleStyle,
+                    ),
                   ),
                 ),
               ),
