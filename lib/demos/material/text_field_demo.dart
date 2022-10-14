@@ -290,6 +290,7 @@ class TextFormFieldDemoState extends State<TextFormFieldDemo>
               // Disabled text field
               TextFormField(
                 enabled: false,
+                readOnly: true,
                 restorationId: 'disabled_email_field',
                 textInputAction: TextInputAction.next,
                 decoration: InputDecoration(
