@@ -72,33 +72,14 @@ class BottomSheetDemo extends StatelessWidget {
 class _BottomSheetContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final localizations = GalleryLocalizations.of(context)!;
-    return SizedBox(
-      height: 300,
-      child: Column(
-        children: [
-          SizedBox(
-            height: 70,
-            child: Center(
-              child: Text(
-                localizations.demoBottomSheetHeader,
-                textAlign: TextAlign.center,
-              ),
-            ),
-          ),
-          const Divider(thickness: 1),
-          Expanded(
-            child: ListView.builder(
-              itemCount: 21,
-              itemBuilder: (context, index) {
-                return ListTile(
-                  title: Text(localizations.demoBottomSheetItem(index)),
-                );
-              },
-            ),
-          ),
-        ],
-      ),
+    return DraggableScrollableSheet(
+      expand: false,
+      builder: (_, ScrollController controller) {
+        return SingleChildScrollView(
+          controller: controller,
+          child: const Text('BottomSheet'),
+        );
+      },
     );
   }
 }
