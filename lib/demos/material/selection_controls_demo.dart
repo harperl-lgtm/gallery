@@ -89,6 +89,7 @@ class _CheckboxDemoState extends State<_CheckboxDemo> with RestorationMixin {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Checkbox(
+              semanticLabel: 'Item 1',
               value: checkboxValueA.value,
               onChanged: (value) {
                 setState(() {
@@ -97,6 +98,7 @@ class _CheckboxDemoState extends State<_CheckboxDemo> with RestorationMixin {
               },
             ),
             Checkbox(
+              semanticLabel: 'Item 2',
               value: checkboxValueB.value,
               onChanged: (value) {
                 setState(() {
@@ -105,6 +107,7 @@ class _CheckboxDemoState extends State<_CheckboxDemo> with RestorationMixin {
               },
             ),
             Checkbox(
+              semanticLabel: 'Item 3',
               value: checkboxValueC.value,
               tristate: true,
               onChanged: (value) {
