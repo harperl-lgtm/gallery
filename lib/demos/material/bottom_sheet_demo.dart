@@ -59,7 +59,7 @@ class BottomSheetDemo extends StatelessWidget {
                     GalleryLocalizations.of(context)!.demoBottomSheetAddLabel,
               ),
             ),
-            body: _bottomSheetDemo(context),
+            body: SemanticsDebugger(child: _bottomSheetDemo(context)),
           ),
         );
       },
